@@ -37,7 +37,7 @@ rappesenta la superficie percorsa dal fuoco - per ogni comune - negli anni dal 2
 
 ![](imgs/mappa.png)
 
-nella mappa è rappresentato:
+nella mappa è rappresentato, oltre al nome del comune e provincia:
 - come sfondo OpenStreetMap;
 - i limiti amministrativi del comune corrente;
 - le aree percorse dal fuoco dal 2010 al 2022;

@@ -27,6 +27,26 @@ QGIS pagina atlante:
 
 sono quote sul livello del mare e indicano la quota massima dell'area percorsa dagli incendi del comune corrente, la minima e la quota media della singola area bruciata. (NB: i punti sono stati tracciati come point on surface per ogni aree bruciata e il calcolo della quota è stata derivata dal DTM Tinitaly)
 
+## Istogramma
+
+![](imgs/istogramma.png)
+
+rappesenta la superficie percorsa dal fuoco - per ogni comune - negli anni dal 2010 al 2022; in ascisse gli anni, in ordinata la somma deglle aree percorse dagli indendi per ogni anno.
+
+## Mappa
+
+![](imgs/mappa.png)
+
+nella mappa è rappresentato:
+- come sfondo OpenStreetMap;
+- i limiti amministrativi del comune corrente;
+- le aree percorse dal fuoco dal 2010 al 2022;
+- l'area dei centri abitati;
+- punti:
+  - in rosso il punto con quota massima dell'incendio;
+  - in verde il punto con quota minima dell'incendio.
+
+
 ## DATI
 
 - [CONFINI DELLE UNITÀ AMMINISTRATIVE A FINI STATISTICI AL 1° GENNAIO 2023](https://www.istat.it/it/archivio/222527)

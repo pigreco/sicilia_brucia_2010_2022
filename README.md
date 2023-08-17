@@ -79,7 +79,7 @@ relation_aggregate('rel','count',"commissario"='Sì')
 ```
 ![](imgs/comuni_max_nro_incendi/Randazzo.png)
 
-### trova i comuni con numero max di anni percorsi da incendi e commissariati nel 2023
+### trova i comuni, con numero max di anni, percorsi da incendi e commissariati nel 2023
 
 ```
 maximum(relation_aggregate('rel','count_distinct',"anno"))
@@ -88,3 +88,30 @@ relation_aggregate('rel','count_distinct',"anno")
 AND 
 "commissario" IS NOT NULL
 ```
+
+risultato:<br>
+Burgio, Carlentini, Catania, Licata, Niscemi, Randazzo, Caccamo,   Castelmola, Cefalù, Mongiuffi Melia, Ragalna, Sciacca
+
+### trova i comuni che non hanno mai subito incendi
+
+```
+relation_aggregate( 'rel', 'sum', "sup_bruciate") = 0
+```
+risultato:<br>
+Aci Bonaccorsi, Canicattì, Castrofilippo, Favignana, Ficarazzi, Joppolo Giancaxio, Mazzarrone, Merì, Milazzo, Misiliscemi, Misterbianco, Montedoro, Pace del Mela, Petrosino, Pozzallo, Raddusa, 
+Ramacca, Riposto, San Pietro Clarenza, Sant'Agata li Battiati, Scordia, Ustica, Valverde.
+
+esempio:
+
+![](imgs/comuni_mai_percorsi_da_incendi/Aci%20Bonaccorsi.png)
+
+### trova i comuni inadempienti o commissariati
+
+```
+"commissario" is not null
+```
+
+risultato:<br>
+Aci Castello, Acireale, Adrano, Agira, Alcara li Fusi, Alì, Antillo, Aragona, Assoro, Augusta, Barcellona Pozzo di Gotto, Belpasso, Brolo, Burgio, Butera, Caccamo, Calamonaci, Caltavuturo, Cammarata, Campofelice di Fitalia, Camporeale, Capizzi, Capo d'Orlando, Capri Leone, Carlentini, Casalvecchio Siculo, Castel di Iudica, Casteldaccia, Castelmola, Casteltermini, Castronovo di Sicilia, Catania, Cefalù, Centuripe, Cesarò, Comitini, Condrò, Contessa Entellina, Falcone, Favara, Ficarra, Floridia, Fondachelli-Fantina, Forza d'Agrò, Francavilla di Sicilia, Francofonte, Furci Siculo, Furnari, Gaggi, Gagliano Castelferrato, Gallodoro, Gela, Giarre, Gioiosa Marea, Giuliana, Grammichele, Graniti, Grotte, Gualtieri Sicaminò, Itala, Leni, Letojanni, Licata, Licodia Eubea, Lipari, Lucca Sicula, Maletto, Malvagna, Mandanici, Maniace, Mascali, Menfi, Milena, Militello in Val di Catania, Milo, Mineo, Mirabella Imbaccari, Monforte San Giorgio, Mongiuffi Melia, Montalbano Elicona, Montallegro, Motta Camastra, Motta Sant'Anastasia, Naro, Naso, Nicosia, Niscemi, Nissoria, Nizza di Sicilia, Novara di Sicilia, Palma di Montechiaro, Partanna, Paternò, Patti, Pettineo, Pietraperzia, Piraino, Ragalna, Randazzo, Ravanusa, Reitano, Riesi, Roccafiorita, Roccalumera, Roccapalumba, Rodì Milici, Rosolini, San Cono, San Fratello, San Giovanni Gemini, San Gregorio di Catania, San Mauro Castelverde, San Michele di Ganzaria, San Teodoro, San Vito Lo Capo, Sant'Agata di Militello, Sant'Alessio Siculo, Sant'Angelo di Brolo, Santa Cristina Gela, Santa Flavia, Santa Margherita di Belice, Santa Marina Salina, Santo Stefano di Camastra, Savoca, Scaletta Zanclea, Sciacca, Siracusa, Sperlinga, Taormina, Terme Vigliatore, Terrasini, Torregrotta, Torrenova, Torretta, Trapani, Tremestieri Etneo, Troina, Valderice, Valdina, Venetico, Viagrande, Vicari, Villafranca Sicula, Villafranca Tirrena, Vita, Vizzini, Zafferana Etnea.
+
+![](imgs/comuni_inadempienti/Alì.png)

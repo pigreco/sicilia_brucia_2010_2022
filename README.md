@@ -18,6 +18,7 @@
   - [trova i comuni che non hanno mai subito incendi](#trova-i-comuni-che-non-hanno-mai-subito-incendi)
   - [trova i comuni inadempienti o commissariati](#trova-i-comuni-inadempienti-o-commissariati)
 - [Progetto QGIS](#progetto-qgis)
+  - [Layer](#layer)
 - [DISCLAIMER](#disclaimer)
 
 <!-- /TOC -->
@@ -29,6 +30,8 @@ QGIS:
 
 QGIS pagina atlante:
 ![](imgs/img03.png)
+
+↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
 
 ## Tabella
 
@@ -157,13 +160,19 @@ Aci Castello, Acireale, Adrano, Agira, Alcara li Fusi, Alì, Antillo, Aragona, A
 
 # Progetto QGIS
 
-Nel progetto sono state realizzate tre relazioni di progetto e tre join tabellari:
+Nel progetto (_che è salvato dentro il gpkg_) sono state realizzate tre relazioni di progetto e tre join tabellari:
 
 ![](imgs/rel.png)
 
 ![](imgs/join.png)
 
 ↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
+
+## Layer
+
+Nella TOC sono presenti vari layer, la descrizione è presente nelle note alla destra del nome layer:
+
+![](imgs/toc.png)
 
 # DISCLAIMER
 

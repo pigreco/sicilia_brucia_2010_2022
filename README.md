@@ -10,6 +10,23 @@ QGIS:
 QGIS pagina atlante:
 ![](imgs/img03.png)
 
+## tabella
+
+![](imgs/tabella.png)
+
+- `Commissariato 2023`: indica se il comune corrente è stato commissariato nel 2023
+- `Area bruciate`: indica il numero di aree bruciate dal 2010 al 2022;
+- `TOT area [ha]`: indica la somma delle supoerfici bruciate dal 2010 al 2022
+- `anni`: indica il numero di anni in cui il comune corrente è stato percorso da incendi;
+- `area comunale [%]`: indica la percentuale di superficie comunale (tolta l'area dei centri abitati) rispetto alla superficie delle aree bruciate nello stesso comune;
+- `overlap aree [%]`: indica la percentuale di aree bruciate sovrapposte negli anni
+
+## Quota
+
+![](imgs/quota.png)
+
+sono quote sul livello del mare e indicano la quota massima dell'area percorsa dagli incendi del comune corrente, la minima e la quota media della singola area bruciata. (NB: i punti sono stati tracciati come point on surface per ogni aree bruciata e il calcolo della quota è stata derivata dal DTM Tinitaly)
+
 ## DATI
 
 - [CONFINI DELLE UNITÀ AMMINISTRATIVE A FINI STATISTICI AL 1° GENNAIO 2023](https://www.istat.it/it/archivio/222527)

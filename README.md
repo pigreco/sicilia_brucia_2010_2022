@@ -176,5 +176,5 @@ Nella TOC sono presenti vari layer, la descrizione è presente nelle note alla d
 
 # DISCLAIMER
 
-Il presente contenuto è stato realizzato/aggiornato da _**Salvatore Fiandaca**_ nel mese di agosto 2023 utilizzando [QGIS 3.28 Firenze LTR](https://qgis.org/it/site/) e distribuito con licenza CC BY 4.0
+Il presente contenuto è stato realizzato/aggiornato, in collaborazione con **Open Data Sicilia**, da _**Salvatore Fiandaca**_ nel mese di agosto 2023 utilizzando [QGIS 3.28 Firenze LTR](https://qgis.org/it/site/) e distribuito con licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it)
 

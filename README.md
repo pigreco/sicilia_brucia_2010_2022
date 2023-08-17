@@ -2,6 +2,24 @@
 
 --------- IN COSTRUZIONE ---------
 
+<!-- TOC -->
+
+- [Aree percorse dal fuoco Sicilia 2010-2022](#aree-percorse-dal-fuoco-sicilia-2010-2022)
+  - [Tabella](#tabella)
+  - [Quota](#quota)
+  - [Istogramma](#istogramma)
+  - [Mappa](#mappa)
+  - [DATI](#dati)
+  - [RIFERIMENTI](#riferimenti)
+- [Espressioni usate nel filtro Atlante](#espressioni-usate-nel-filtro-atlante)
+    - [trova la pagina dell'Atlante con il comune con max numero di incendi](#trova-la-pagina-dellatlante-con-il-comune-con-max-numero-di-incendi)
+    - [trova la pagina dell'Atlante con il comune con max numero di incendi tra quelli commissariati](#trova-la-pagina-dellatlante-con-il-comune-con-max-numero-di-incendi-tra-quelli-commissariati)
+    - [trova i comuni, con numero max di anni, percorsi da incendi e commissariati nel 2023](#trova-i-comuni-con-numero-max-di-anni-percorsi-da-incendi-e-commissariati-nel-2023)
+    - [trova i comuni che non hanno mai subito incendi](#trova-i-comuni-che-non-hanno-mai-subito-incendi)
+    - [trova i comuni inadempienti o commissariati](#trova-i-comuni-inadempienti-o-commissariati)
+
+<!-- /TOC -->
+
 Analisi delle aree percorse dal fuoco in Sicilia tra gli anni 2010 e 2022 - dati SIF
 
 QGIS:
@@ -10,7 +28,7 @@ QGIS:
 QGIS pagina atlante:
 ![](imgs/img03.png)
 
-## tabella
+## Tabella
 
 ![](imgs/tabella.png)
 
@@ -56,10 +74,12 @@ nella mappa è rappresentato, oltre al nome del comune e provincia:
 
 ## RIFERIMENTI
 
-- QGIS: <https://www.qgis.org/it/site/>
+- **QGIS**: <https://www.qgis.org/it/site/>
 
 
-## Espressioni usate nel filtro Atlante
+# Espressioni usate nel filtro Atlante
+
+![](imgs/filtro.png)
 
 ### trova la pagina dell'Atlante con il comune con max numero di incendi
 ```

@@ -12,11 +12,13 @@
   - [DATI](#dati)
   - [RIFERIMENTI](#riferimenti)
 - [Espressioni usate nel filtro Atlante](#espressioni-usate-nel-filtro-atlante)
-    - [trova la pagina dell'Atlante con il comune con max numero di incendi](#trova-la-pagina-dellatlante-con-il-comune-con-max-numero-di-incendi)
-    - [trova la pagina dell'Atlante con il comune con max numero di incendi tra quelli commissariati](#trova-la-pagina-dellatlante-con-il-comune-con-max-numero-di-incendi-tra-quelli-commissariati)
-    - [trova i comuni, con numero max di anni, percorsi da incendi e commissariati nel 2023](#trova-i-comuni-con-numero-max-di-anni-percorsi-da-incendi-e-commissariati-nel-2023)
-    - [trova i comuni che non hanno mai subito incendi](#trova-i-comuni-che-non-hanno-mai-subito-incendi)
-    - [trova i comuni inadempienti o commissariati](#trova-i-comuni-inadempienti-o-commissariati)
+  - [trova la pagina dell'Atlante con il comune con max numero di incendi](#trova-la-pagina-dellatlante-con-il-comune-con-max-numero-di-incendi)
+  - [trova la pagina dell'Atlante con il comune con max numero di incendi tra quelli commissariati](#trova-la-pagina-dellatlante-con-il-comune-con-max-numero-di-incendi-tra-quelli-commissariati)
+  - [trova i comuni, con numero max di anni, percorsi da incendi e commissariati nel 2023](#trova-i-comuni-con-numero-max-di-anni-percorsi-da-incendi-e-commissariati-nel-2023)
+  - [trova i comuni che non hanno mai subito incendi](#trova-i-comuni-che-non-hanno-mai-subito-incendi)
+  - [trova i comuni inadempienti o commissariati](#trova-i-comuni-inadempienti-o-commissariati)
+- [Progetto QGIS](#progetto-qgis)
+- [DISCLAIMER](#disclaimer)
 
 <!-- /TOC -->
 
@@ -81,7 +83,7 @@ nella mappa è rappresentato, oltre al nome del comune e provincia:
 
 ![](imgs/filtro.png)
 
-### trova la pagina dell'Atlante con il comune con max numero di incendi
+## trova la pagina dell'Atlante con il comune con max numero di incendi
 ```
 maximum(relation_aggregate('rel', 'count', @id))
 = 
@@ -90,7 +92,7 @@ relation_aggregate('rel', 'count', @id)
 
 ![](imgs/comuni_max_nro_incendi/Monreale.png)
 
-### trova la pagina dell'Atlante con il comune con max numero di incendi tra quelli commissariati
+## trova la pagina dell'Atlante con il comune con max numero di incendi tra quelli commissariati
 
 ```
 maximum(relation_aggregate('rel','count',"commissario"='Sì'))
@@ -99,7 +101,7 @@ relation_aggregate('rel','count',"commissario"='Sì')
 ```
 ![](imgs/comuni_max_nro_incendi/Randazzo.png)
 
-### trova i comuni, con numero max di anni, percorsi da incendi e commissariati nel 2023
+## trova i comuni, con numero max di anni, percorsi da incendi e commissariati nel 2023
 
 ```
 maximum(relation_aggregate('rel','count_distinct',"anno"))
@@ -112,7 +114,7 @@ AND
 risultato:<br>
 Burgio, Carlentini, Catania, Licata, Niscemi, Randazzo, Caccamo,   Castelmola, Cefalù, Mongiuffi Melia, Ragalna, Sciacca
 
-### trova i comuni che non hanno mai subito incendi
+## trova i comuni che non hanno mai subito incendi
 
 ```
 relation_aggregate( 'rel', 'sum', "sup_bruciate") = 0
@@ -125,7 +127,7 @@ esempio:
 
 ![](imgs/comuni_mai_percorsi_da_incendi/Aci%20Bonaccorsi.png)
 
-### trova i comuni inadempienti o commissariati
+## trova i comuni inadempienti o commissariati
 
 ```
 "commissario" is not null
@@ -135,3 +137,16 @@ risultato:<br>
 Aci Castello, Acireale, Adrano, Agira, Alcara li Fusi, Alì, Antillo, Aragona, Assoro, Augusta, Barcellona Pozzo di Gotto, Belpasso, Brolo, Burgio, Butera, Caccamo, Calamonaci, Caltavuturo, Cammarata, Campofelice di Fitalia, Camporeale, Capizzi, Capo d'Orlando, Capri Leone, Carlentini, Casalvecchio Siculo, Castel di Iudica, Casteldaccia, Castelmola, Casteltermini, Castronovo di Sicilia, Catania, Cefalù, Centuripe, Cesarò, Comitini, Condrò, Contessa Entellina, Falcone, Favara, Ficarra, Floridia, Fondachelli-Fantina, Forza d'Agrò, Francavilla di Sicilia, Francofonte, Furci Siculo, Furnari, Gaggi, Gagliano Castelferrato, Gallodoro, Gela, Giarre, Gioiosa Marea, Giuliana, Grammichele, Graniti, Grotte, Gualtieri Sicaminò, Itala, Leni, Letojanni, Licata, Licodia Eubea, Lipari, Lucca Sicula, Maletto, Malvagna, Mandanici, Maniace, Mascali, Menfi, Milena, Militello in Val di Catania, Milo, Mineo, Mirabella Imbaccari, Monforte San Giorgio, Mongiuffi Melia, Montalbano Elicona, Montallegro, Motta Camastra, Motta Sant'Anastasia, Naro, Naso, Nicosia, Niscemi, Nissoria, Nizza di Sicilia, Novara di Sicilia, Palma di Montechiaro, Partanna, Paternò, Patti, Pettineo, Pietraperzia, Piraino, Ragalna, Randazzo, Ravanusa, Reitano, Riesi, Roccafiorita, Roccalumera, Roccapalumba, Rodì Milici, Rosolini, San Cono, San Fratello, San Giovanni Gemini, San Gregorio di Catania, San Mauro Castelverde, San Michele di Ganzaria, San Teodoro, San Vito Lo Capo, Sant'Agata di Militello, Sant'Alessio Siculo, Sant'Angelo di Brolo, Santa Cristina Gela, Santa Flavia, Santa Margherita di Belice, Santa Marina Salina, Santo Stefano di Camastra, Savoca, Scaletta Zanclea, Sciacca, Siracusa, Sperlinga, Taormina, Terme Vigliatore, Terrasini, Torregrotta, Torrenova, Torretta, Trapani, Tremestieri Etneo, Troina, Valderice, Valdina, Venetico, Viagrande, Vicari, Villafranca Sicula, Villafranca Tirrena, Vita, Vizzini, Zafferana Etnea.
 
 ![](imgs/comuni_inadempienti/Alì.png)
+
+# Progetto QGIS
+
+Nel progetto sono state realizzate tre relazioni di progetto e tre join tabellari:
+
+![](imgs/rel.png)
+
+![](imgs/join.png)
+
+# DISCLAIMER
+
+Il presente contenuto è stato realizzato/aggiornato da _**Salvatore Fiandaca**_ nel mese di agosto 2023 utilizzando [QGIS 3.28 Firenze LTR](https://qgis.org/it/site/) e distribuito con licenza CC BY 4.0
+

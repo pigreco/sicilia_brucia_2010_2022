@@ -1,13 +1,12 @@
 # Aree percorse dal fuoco Sicilia 2010-2022
 
---------- IN COSTRUZIONE ---------
-
 <!-- TOC -->
 
 - [Aree percorse dal fuoco Sicilia 2010-2022](#aree-percorse-dal-fuoco-sicilia-2010-2022)
 - [INTRO](#intro)
   - [DATI](#dati)
   - [RIFERIMENTI](#riferimenti)
+  - [RINGRAZIAMENTI](#ringraziamenti)
 - [Espressioni usate nel filtro Atlante](#espressioni-usate-nel-filtro-atlante)
   - [trova la pagina dell'Atlante con il comune con max numero di incendi](#trova-la-pagina-dellatlante-con-il-comune-con-max-numero-di-incendi)
   - [trova la pagina dell'Atlante con il comune con max numero di incendi tra quelli commissariati](#trova-la-pagina-dellatlante-con-il-comune-con-max-numero-di-incendi-tra-quelli-commissariati)
@@ -49,9 +48,15 @@ QGIS:
 ## RIFERIMENTI
 
 - **QGIS**: <https://www.qgis.org/it/site/>
+- **DOC QGIS**: <https://docs.qgis.org/3.28/it/docs/user_manual/>
 
+## RINGRAZIAMENTI
+
+- Comunità **Open Data Sicilia**: <https://twitter.com/opendatasicilia>
 
 # Espressioni usate nel filtro Atlante
+
+Lo strumento principe per fare analisi ed estrarre dati (pagine) è il filtro presente nella scheda `Atlante`:
 
 ![](imgs/filtro.png)
 

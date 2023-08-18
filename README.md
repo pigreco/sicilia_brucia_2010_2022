@@ -5,6 +5,7 @@
 <!-- TOC -->
 
 - [Aree percorse dal fuoco Sicilia 2010-2022](#aree-percorse-dal-fuoco-sicilia-2010-2022)
+- [INTRO](#intro)
   - [DATI](#dati)
   - [RIFERIMENTI](#riferimenti)
 - [Espressioni usate nel filtro Atlante](#espressioni-usate-nel-filtro-atlante)
@@ -24,7 +25,13 @@
 
 <!-- /TOC -->
 
+# INTRO
 Analisi delle aree percorse dal fuoco in Sicilia tra gli anni 2010 e 2022 - dati SIF e Regione Siciliana
+
+Lo scopo principale di questo repository è quello di _dimostrare_ come è semplice realizzare delle analisi usando il compositore di stampe di QGIS, e in particolare il suo atlas (stampe in serie). Attraverso questo strumento è possibile creare un semplice _layout di stampa_ e successivamente visualizzara/stampare 391 pagine una per ogni comune. I vari oggetti presenti nel template (mappa, panoramica, testo, grafico, tabella, ecc...) sono dinamici, ovvero, cambiano sfogliando l'atlante.
+
+PRINT LAYOUT:
+![](imgs/print_layout.png)
 
 QGIS:
 ![](imgs/img02bis.png)

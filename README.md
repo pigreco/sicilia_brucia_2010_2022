@@ -43,8 +43,6 @@ QGIS:
 -  [Ufficio stampa della Regione Siciliana - commissari](https://www.regione.sicilia.it/la-regione-informa/incendi-nominati-commissari-catasto-aree-bruciate-nei-comuni-inadempienti)
 -  [Banca dati della Regione Siciliana costituita da una serie di banche dati del settore forestale SIF (Sistema Informativo Forestale)](https://sifweb.regione.sicilia.it/arcgis/rest/services)
 
-↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
-
 ## RIFERIMENTI
 
 - **QGIS**: <https://www.qgis.org/it/site/>
@@ -53,6 +51,8 @@ QGIS:
 ## RINGRAZIAMENTI
 
 - Comunità **Open Data Sicilia**: <https://twitter.com/opendatasicilia>
+
+↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
 
 # Espressioni usate nel filtro Atlante
 

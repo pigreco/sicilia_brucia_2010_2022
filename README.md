@@ -20,6 +20,7 @@
     - [Quota](#quota)
     - [Istogramma](#istogramma)
     - [Mappa](#mappa)
+- [Chi ha usato questo repository](#chi-ha-usato-questo-repository)
 - [DISCLAIMER](#disclaimer)
 
 <!-- /TOC -->
@@ -198,6 +199,9 @@ nella mappa è rappresentato, oltre al nome del comune e provincia:
 
 ↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
 
+# Chi ha usato questo repository
+
+- Blog post su Open Data Sicilia: <- Blog post by Open Data SIcilia: <https://opendatasicilia.it/2023/08/18/terre-percorse-dal-fuoco/>
 # DISCLAIMER
 
 Il presente contenuto è stato realizzato/aggiornato, in collaborazione con **Open Data Sicilia**, da _**Salvatore Fiandaca**_ nel mese di agosto 2023 utilizzando [QGIS 3.28 Firenze LTR](https://qgis.org/it/site/) e distribuito con licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it)

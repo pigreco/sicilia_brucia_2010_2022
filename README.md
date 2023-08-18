@@ -179,7 +179,7 @@ Nel caso di Comuni che non sono mai stai percorsi da incendi le quote non sarann
 
 rappesenta la superficie percorsa dal fuoco - per ogni comune - negli anni dal 2010 al 2022; in ascisse gli anni, in ordinata la somma deglle aree percorse dagli indendi per ogni anno.
 
-Nel caso di Comuni che non sono mai stai percorsi da incendi al posto dell'istogramma comparirà un grando OK!
+Nel caso di Comuni che non sono mai stai percorsi da incendi comparirà un grande OK! al posto dell'istogramma.
 
 ↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
 

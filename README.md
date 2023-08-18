@@ -5,10 +5,6 @@
 <!-- TOC -->
 
 - [Aree percorse dal fuoco Sicilia 2010-2022](#aree-percorse-dal-fuoco-sicilia-2010-2022)
-  - [Tabella](#tabella)
-  - [Quota](#quota)
-  - [Istogramma](#istogramma)
-  - [Mappa](#mappa)
   - [DATI](#dati)
   - [RIFERIMENTI](#riferimenti)
 - [Espressioni usate nel filtro Atlante](#espressioni-usate-nel-filtro-atlante)
@@ -19,61 +15,19 @@
   - [trova i comuni inadempienti o commissariati](#trova-i-comuni-inadempienti-o-commissariati)
 - [Progetto QGIS](#progetto-qgis)
   - [Layer](#layer)
+  - [Atlante](#atlante)
+    - [Tabella](#tabella)
+    - [Quota](#quota)
+    - [Istogramma](#istogramma)
+    - [Mappa](#mappa)
 - [DISCLAIMER](#disclaimer)
 
 <!-- /TOC -->
 
-Analisi delle aree percorse dal fuoco in Sicilia tra gli anni 2010 e 2022 - dati SIF
+Analisi delle aree percorse dal fuoco in Sicilia tra gli anni 2010 e 2022 - dati SIF e Regione Siciliana
 
 QGIS:
 ![](imgs/img02bis.png)
-
-QGIS pagina atlante:
-![](imgs/img03.png)
-
-↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
-
-## Tabella
-
-![](imgs/tabella.png)
-
-- `Commissariato 2023`: indica se il comune corrente è stato commissariato nel 2023
-- `Area bruciate`: indica il numero di aree bruciate dal 2010 al 2022;
-- `TOT area [ha]`: indica la somma delle supoerfici bruciate dal 2010 al 2022
-- `anni`: indica il numero di anni in cui il comune corrente è stato percorso da incendi;
-- `area comunale [%]`: indica la percentuale di superficie comunale (tolta l'area dei centri abitati) rispetto alla superficie delle aree bruciate nello stesso comune;
-- `overlap aree [%]`: indica la percentuale di aree bruciate sovrapposte negli anni
-
-↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
-
-## Quota
-
-![](imgs/quota.png)
-
-sono quote sul livello del mare e indicano la quota massima dell'area percorsa dagli incendi del comune corrente, la minima e la quota media della singola area bruciata. (NB: i punti sono stati tracciati come point on surface per ogni aree bruciata e il calcolo della quota è stata derivata dal DTM Tinitaly)
-
-↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
-
-## Istogramma
-
-![](imgs/istogramma.png)
-
-rappesenta la superficie percorsa dal fuoco - per ogni comune - negli anni dal 2010 al 2022; in ascisse gli anni, in ordinata la somma deglle aree percorse dagli indendi per ogni anno.
-
-↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
-
-## Mappa
-
-![](imgs/mappa.png)
-
-nella mappa è rappresentato, oltre al nome del comune e provincia:
-- come sfondo OpenStreetMap;
-- i limiti amministrativi del comune corrente;
-- le aree percorse dal fuoco dal 2010 al 2022;
-- l'area dei centri abitati;
-- punti:
-  - in rosso il punto con quota massima dell'incendio;
-  - in verde il punto con quota minima dell'incendio.
 
 ↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
 
@@ -125,6 +79,7 @@ relation_aggregate('rel','count_distinct',"anno")
 AND 
 "commissario" IS NOT NULL
 ```
+![](imgs/comuni_inadempienti/Burgio.png)
 
 risultato:<br>
 Burgio, Carlentini, Catania, Licata, Niscemi, Randazzo, Caccamo,   Castelmola, Cefalù, Mongiuffi Melia, Ragalna, Sciacca
@@ -173,6 +128,63 @@ Nel progetto (_che è salvato dentro il gpkg_) sono state realizzate tre relazio
 Nella TOC sono presenti vari layer, la descrizione è presente nelle note alla destra del nome layer:
 
 ![](imgs/toc.png)
+
+↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
+
+## Atlante
+
+Nel progetto è presente un atlante (atlas) con le seguenti caratterisitiche:
+
+layout atlante:
+![](imgs/img03.png)
+
+### Tabella
+
+![](imgs/tabella.png)
+
+- `Commissariato 2023`: indica se il comune corrente è stato commissariato nel 2023
+- `Area bruciate`: indica il numero di aree bruciate dal 2010 al 2022;
+- `TOT area [ha]`: indica la somma delle supoerfici bruciate dal 2010 al 2022
+- `anni`: indica il numero di anni in cui il comune corrente è stato percorso da incendi;
+- `area comunale [%]`: indica la percentuale di superficie comunale (tolta l'area dei centri abitati) rispetto alla superficie delle aree bruciate nello stesso comune;
+- `overlap aree [%]`: indica la percentuale di aree bruciate sovrapposte negli anni
+
+↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
+
+### Quota
+
+![](imgs/quota.png)
+
+sono quote sul livello del mare e indicano la quota massima dell'area percorsa dagli incendi del comune corrente, la minima e la quota media della singola area bruciata. (NB: i punti sono stati tracciati come point on surface per ogni aree bruciata e il calcolo della quota è stata derivata dal DTM Tinitaly)
+
+Nel caso di Comuni che non sono mai stai percorsi da incendi le quote non saranno visibili.
+
+↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
+
+### Istogramma
+
+![](imgs/istogramma.png)
+
+rappesenta la superficie percorsa dal fuoco - per ogni comune - negli anni dal 2010 al 2022; in ascisse gli anni, in ordinata la somma deglle aree percorse dagli indendi per ogni anno.
+
+Nel caso di Comuni che non sono mai stai percorsi da incendi al posto dell'istogramma comparirà un grando OK!
+
+↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
+
+### Mappa
+
+![](imgs/mappa.png)
+
+nella mappa è rappresentato, oltre al nome del comune e provincia:
+- come sfondo OpenStreetMap;
+- i limiti amministrativi del comune corrente;
+- le aree percorse dal fuoco dal 2010 al 2022;
+- l'area dei centri abitati;
+- punti:
+  - in rosso il punto con quota massima dell'incendio;
+  - in verde il punto con quota minima dell'incendio.
+
+↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
 
 # DISCLAIMER
 

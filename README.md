@@ -48,6 +48,7 @@ QGIS:
 
 - **QGIS**: <https://www.qgis.org/it/site/>
 - **DOC QGIS**: <https://docs.qgis.org/3.28/it/docs/user_manual/>
+- **PDF dell'atlante**:<https://github.com/pigreco/sicilia_brucia_2010_2022/raw/main/imgs/atlas_aree_percorse_dal_fuoco.zip>
 
 ## RINGRAZIAMENTI
 

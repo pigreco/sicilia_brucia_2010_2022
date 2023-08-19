@@ -20,6 +20,7 @@
     - [Quota](#quota)
     - [Istogramma](#istogramma)
     - [Mappa](#mappa)
+    - [Bonus](#bonus)
 - [Chi ha usato questo repository](#chi-ha-usato-questo-repository)
 - [DISCLAIMER](#disclaimer)
 
@@ -48,7 +49,7 @@ QGIS:
 
 - **QGIS**: <https://www.qgis.org/it/site/>
 - **DOC QGIS**: <https://docs.qgis.org/3.28/it/docs/user_manual/>
-- **PDF dell'atlante**:<https://github.com/pigreco/sicilia_brucia_2010_2022/raw/main/imgs/atlas_aree_percorse_dal_fuoco.zip>
+- [PDF atlante(circa 400 pagine)](https://github.com/pigreco/sicilia_brucia_2010_2022/raw/main/imgs/atlas_aree_percorse_dal_fuoco.zip)
 
 ## RINGRAZIAMENTI
 
@@ -200,9 +201,38 @@ nella mappa è rappresentato, oltre al nome del comune e provincia:
 
 ↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
 
+### Bonus
+
+L'atlante, nella configurazione base cioè senza alcun filtro, genera 391 pagine, una per ogni comune siciliano. Tra le varie opzioni attive, l'atlante è impostato per stampare seguendo un ordinamento alfabetico crescente usando la concatenazione degli attributi COD_PROV (codice provincia) e COMUNE (_"COD_PROV"||"COMUNE"_). Quindi l'atlante stamperà tutti i comuni ordinani alfabeticamente per ogni provincia, partendo da lla provincia di Trapani (COD_PROV=81).
+
+Per aggiungere una pagina iniziale per ogni gruppo di comuni afferenti alla relativa provincia, è stata aggiunta una prima pagina al layout in cui sono visualizzati:
+
+![](imgs/prima_pagina.png)
+
+dove:
+
+1. etichetta dinamica, il nome della provincia cambia contestualmente;
+2. etichetta dinamica, visualizza il numero di pagine (comuni) della provincia corrente;
+3. tabella dinabica con vari attributi che riassumono alcune variabili provinciali.
+
+**NB:** per far stampare la prima pagina SOLO una volta per ogni gruppo di comuni afferenti ad una provincia, occorre usare la seguente espressione:
+
+```py
+array_agg( 
+  expression:="COMUNE" , 
+  group_by:="COD_PROV",
+  order_by:= "COD_PROV"||"COMUNE")[0] != @atlas_pagename
+```
+
+nelle proprietà della pagina, in particolare nella opzione `Escludi pagina dalle esportazione`
+
+![](imgs/escludi_pagina_esportazione.png)
+
+↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
+
 # Chi ha usato questo repository
 
-- Blog post su Open Data Sicilia: <- Blog post by Open Data SIcilia: <https://opendatasicilia.it/2023/08/18/terre-percorse-dal-fuoco/>
+- Blog post su Open Data Sicilia: <https://opendatasicilia.it/2023/08/18/terre-percorse-dal-fuoco/>
 # DISCLAIMER
 
 Il presente contenuto è stato realizzato/aggiornato, in collaborazione con **Open Data Sicilia**, da _**Salvatore Fiandaca**_ nel mese di agosto 2023 utilizzando [QGIS 3.28 Firenze LTR](https://qgis.org/it/site/) e distribuito con licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it)

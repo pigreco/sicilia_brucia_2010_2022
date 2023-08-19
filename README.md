@@ -228,9 +228,12 @@ nelle proprietà della pagina, in particolare nella opzione `Escludi pagina dall
 
 ![](imgs/escludi_pagina_esportazione.png)
 
-↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
+![](imgs/demo.gif)
 
 PS: il file di progetto è [qui](/risorse/test.qgz)
+
+↑ [torna su](#aree-percorse-dal-fuoco-sicilia-2010-2022) ↑
+
 # Chi ha usato questo repository
 
 - Blog post su Open Data Sicilia: <https://opendatasicilia.it/2023/08/18/terre-percorse-dal-fuoco/>
